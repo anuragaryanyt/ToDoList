@@ -35,10 +35,10 @@ class ToDoList:
     def display(self):
         print("-------------------------------------------------------------------")
         print("                          TO DO LIST                               ")
-        print("Index \t Tasks \t\t\t\t Status")
-        for index, tasks in enumerate(self.tasks):
+        print("Index   Tasks   \t\tStatus")
+        for index, tasks in enumerate(self.tasks, start=1):
             status = "[Completed]" if tasks["completed"] == "Yes" else "[Not Completed]"
-            print(f"{index+1}. \t {tasks['tasks']} \t\t\t\t {status}")
+            print(f"{index:<7} {tasks['tasks']:<7} \t\t{status}")
 
 
 def main():
